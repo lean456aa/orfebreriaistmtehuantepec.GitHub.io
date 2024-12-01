@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orfebrería del Futuro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="javascript.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú y Logo -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkH6HbZrDC6xAfu2mGstvovVA17wX4jZdtiA&s.png" alt="Logo Futurista" class="logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="#centenario" onclick="mostrarImagen('centenario')">Centenarios</a></li>
+                <li><a href="#anillos" onclick="mostrarImagen('anillos')">Anillos</a></li>
+                <li><a href="#aretes" onclick="mostrarImagen('aretes')">Aretes</a></li>
+                <li><a href="#pulseras" onclick="mostrarImagen('pulseras')">Pulseras</a></li>
+                <li><a href="#acerca" onclick="mostrarSeccion('acerca')">Acerca de</a></li>
+                <li><a href="#comentarios" onclick="mostrarSeccion('comentarios')">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Orfebrería del istmo Tehuantepec</h1>
+        <p class="hero-description">Una fusión de arte, tradición y vanguardia.</p>
+        <div class="informacion-adicional">
+            <p>
+                La orfebrería del Istmo de Tehuantepec tiene siglos de historia una tradición que ha sido pasada de generación en generación. Los artesanos de esta región se especializan en crear piezas únicas, hechas a mano, con metales preciosos como el oro y la plata, a menudo combinados con piedras semipreciosas.Las joyas del Istmo de Tehuantepec reflejan la rica cultura zapoteca, mezclando lo antiguo con lo moderno en sus diseños. Las mujeres zapotecas han sido las principales portadoras de estas creaciones, y las piezas de orfebrería son esenciales en sus trajes tradicionales, especialmente en las festividades y celebraciones.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección Principal -->
+    <section class="orfeberia-main" id="contenido-principal">
+        <div id="imagen-container" class="row gx-4 gy-4">
+            <div class="col-lg-12 text-center">
+                <h2>Conoce nuestras joyas</h2>
+                <p>Descubre piezas únicas diseñadas con pasión por la tradición.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de -->
+    <div id="acerca-de-container" class="dynamic-section" style="display: none;">
+        <h2>Acerca de Nosotros</h2>
+        <p>Nuestro taller combina las técnicas más avanzadas con un profundo respeto por la artesanía tradicional.</p>
+    </div>
+
+    <!-- Sección de Comentarios -->
+    <div id="comentarios-container" class="dynamic-section" style="display: none;">
+        <h2>Comentarios</h2>
+        <form id="comentarios-form" onsubmit="agregarComentario(event)">
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Escribe tu comentario:</label>
+                <textarea id="comentario" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="lista-comentarios" class="mt-4">
+            <h4>Comentarios de visitantes:</h4>
+            <!-- Aquí se agregarán los comentarios dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Orfebrería del istmo de tehuantepec. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
